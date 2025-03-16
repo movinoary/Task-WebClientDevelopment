@@ -1,5 +1,6 @@
-# WCD Task 1
+# Task Web Client Dvelopment
 
+## Task 1
 Tugas pertama untuk pelajaran "Web Client Development"
 1. kode untuk mencari luas persegi panjang ->
    Dibuat dengan menerapkan rumus untuk mencari luas persegi panjang yang diterapkan pada bahasa pemrograman.
@@ -15,3 +16,11 @@ Tugas pertama untuk pelajaran "Web Client Development"
    
 5. kode untuk mencetak inisial nama Anda dalam huruf kapital ->
    Dibuat dengan memasukkan nama kemudian di dipisahkan menjadi sebuah array, kemudian di looping. dalam looping itu dipisahkan menjadi per-character kemudian diambil urutan ke-0nya terakhir urutan terkahir di masukan ke sebuah array. Untuk menampilkannya array tersebut dijalankan fungsi join.
+
+
+## Task 2
+1. Konversi ke Celcius
+2. Konversi ke Kilometer
+3. Tentukan Bilangan Ganjil atau Genap
+4. Mengganti String
+5. String Palindrom
