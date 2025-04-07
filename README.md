@@ -24,3 +24,10 @@ Tugas pertama untuk pelajaran "Web Client Development"
 3. Tentukan Bilangan Ganjil atau Genap
 4. Mengganti String
 5. String Palindrom
+
+
+## Task 3
+Menyempurnakan tampilan HTML dengan CSS yang sudah diberikan
+
+## Task 4
+Membuat code dengan ReactJS dan CSS framework dengan menyesuakan tampilan dengan file figma yang diberikan oleh dosen
