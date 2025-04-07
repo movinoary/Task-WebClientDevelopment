@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Website Sederhana</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      background-color: skyblue;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: white;
+    }
+    p {
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    button {
+      background-color: white;
+      color: skyblue;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <section>
+      <p>hi</p>
+      <h1>Mohammad Vino Arystio</h1>
+      <h2>Website Developer</h2>
+    </section>
+    <div>
+      <button onclick="bukaLinkedIn()">LinkedIn</button>
+      <button onclick="bukaInstagram()">Instagram</button>
+    </div>
+  </body>
+  <script>
+    function bukaLinkedIn() {
+      window.location.href = "https://www.linkedin.com/in/moh-vino-arystio/";
+    }
+
+    function bukaInstagram() {
+      window.location.href = "https://www.instagram.com/mohvinoary/";
+    }
+  </script>
+</html>
