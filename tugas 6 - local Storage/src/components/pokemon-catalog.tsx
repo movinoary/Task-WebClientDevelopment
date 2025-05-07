@@ -46,7 +46,6 @@ export default function PokemonCatalog() {
   };
 
   const handlePokemonSelect = (pokemon: Pokemon) => {
-    console.log(pokemon);
     setSelectedPokemon(pokemon);
   };
 
@@ -189,7 +188,6 @@ export default function PokemonCatalog() {
               pokemon={pokemon}
               viewMode={viewMode}
               onClick={() => handlePokemonSelect(pokemon)}
-              // onClick={() => console.log(pokemon)}
             />
           ))}
         </div>
