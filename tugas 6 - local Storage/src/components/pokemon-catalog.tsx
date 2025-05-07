@@ -1,39 +1,26 @@
 import type React from "react";
-
+import { usePokemon } from "../context/pokemonContext";
 import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import PokemonCard from "./pokemon-card";
 import PokemonDetail from "./pokemon-detail";
 import type { Pokemon } from "../types/pokemon";
-import { fetchPokemon } from "../lib/api";
 import logo from "../../public/logo.svg";
 
 export default function PokemonCatalog() {
-  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  const { state } = usePokemon();
+  const { pokemons, loading } = state;
+
   const [filteredPokemons, setFilteredPokemons] = useState<Pokemon[]>([]);
   const [viewMode, setViewMode] = useState<"grid" | "list">("list");
   const [sortOption, setSortOption] = useState<string>("id");
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [isSearching, setIsSearching] = useState<boolean>(false);
 
   useEffect(() => {
-    const loadPokemon = async () => {
-      setLoading(true);
-      try {
-        const data = await fetchPokemon();
-        setPokemons(data);
-        setFilteredPokemons(data);
-      } catch (error) {
-        console.error("Failed to fetch pokemon:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadPokemon();
-  }, []);
+    setFilteredPokemons(pokemons);
+  }, [pokemons]);
 
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSortOption(e.target.value);
@@ -59,9 +46,8 @@ export default function PokemonCatalog() {
   };
 
   const handlePokemonSelect = (pokemon: Pokemon) => {
-    const datapokemon = JSON.stringify(pokemon);
-    localStorage.setItem("pokemonLocal", datapokemon);
-    // setSelectedPokemon(pokemon);
+    console.log(pokemon);
+    setSelectedPokemon(pokemon);
   };
 
   const handleBackToList = () => {
@@ -203,6 +189,7 @@ export default function PokemonCatalog() {
               pokemon={pokemon}
               viewMode={viewMode}
               onClick={() => handlePokemonSelect(pokemon)}
+              // onClick={() => console.log(pokemon)}
             />
           ))}
         </div>

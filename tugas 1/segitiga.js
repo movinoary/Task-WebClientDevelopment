@@ -1,4 +1,7 @@
-const anglesOne = 80
-const anglesTwo= 65
+export const segitiga = (anglesOneInput, anglesTwoInput) => {
+  const anglesOne = anglesOneInput || 80;
+  const anglesTwo = anglesTwoInput || 65;
 
-const triangle = 180 - (anglesOne + anglesTwo) // hasil : 35
+  const triangle = 180 - (anglesOne + anglesTwo);
+  return triangle;
+};

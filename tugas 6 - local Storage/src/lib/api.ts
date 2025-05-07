@@ -1,6 +1,5 @@
 import type { Pokemon } from "../types/pokemon";
 
-// Mock data for the Pokemon
 const mockPokemon: Pokemon[] = [
   {
     id: 1001,

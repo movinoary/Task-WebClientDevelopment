@@ -1,11 +1,14 @@
-let name = "Vino Arystio"
-name = name.split(" ")
-let results = []
+export const inisialJS = (fullnameInput) => {
+  let fullName = fullnameInput || "Vino Arystio";
+  const resutlName = fullName.split(" ");
+  let results = [];
 
-for(let i=0; i < name.length; i++){
-  let initial = name[i].split("")
-  initial = initial[0]
-  results.push(initial)
-}
+  for (let i = 0; i < resutlName.length; i++) {
+    let initial = resutlName[i].split("");
+    initial = initial[0];
+    results.push(initial);
+  }
 
-results = results.join("") // hasil : VA
+  results = results.join("");
+  return results;
+};
